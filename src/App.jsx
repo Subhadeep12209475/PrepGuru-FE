@@ -4,11 +4,15 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile"; // ✅ ADD THIS
 
-// NEW FEATURE PAGES
+// FEATURE PAGES
 import Practice from "./pages/Practice";
 import Progress from "./pages/Progress";
-import ResumeChecker from "./pages/ResumeChecker";
+import Resume from "./pages/Resume";
+
+// QUESTION PAGE
+import Question from "./pages/Question";
 
 // OPTIONAL / FUTURE
 import Planner from "./pages/Planner";
@@ -28,8 +32,12 @@ export default function App() {
 
         {/* FEATURE PAGES */}
         <Route path="/practice" element={<Practice />} />
+        <Route path="/practice/:id" element={<Question />} />
         <Route path="/progress" element={<Progress />} />
-        <Route path="/resume" element={<ResumeChecker />} />
+        <Route path="/resume" element={<Resume />} />
+
+        {/* PROFILE */}
+        <Route path="/profile" element={<Profile />} /> {/* ✅ FIX */}
 
         {/* OPTIONAL */}
         <Route path="/planner" element={<Planner />} />
